@@ -1,6 +1,6 @@
 # Django-React-Local-Ecommerce
 
-##Project Purpose
+## Project Purpose
 
   * An Ecommerce which keeps and sells Eyeware and Eyecare products.
   * The Site is partnered with a local shop. So, one can also book an appointment and have their eyes checked.

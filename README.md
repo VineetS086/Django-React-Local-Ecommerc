@@ -20,7 +20,7 @@
 
 ## Running The Project
   ### Installation
-  `
+  ```
   git clone https://github.com/VineetS086/Django-React-Local-Ecommerc/
   cd Django-React-Local-Ecommerc/
   
@@ -34,5 +34,5 @@
   
   npm run build
   
-  `
+  ```
   

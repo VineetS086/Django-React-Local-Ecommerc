@@ -17,6 +17,7 @@
 ## Contributing Members
   * _[VineetS086](https://github.com/VineetS086)_
   * _[Gauravchauhan2403](https://github.com/gauravchauhan2403)_
+  * _[Hayat-92](https://github.com/hayat-92)_
   * [anybody can do it]
 
 ## Running The Project

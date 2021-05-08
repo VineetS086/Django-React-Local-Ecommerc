@@ -1,0 +1,8 @@
+{
+    "id"        : "<pk:brand_id>",
+    "name"      : "<str:brand_name>",
+    "imageUrl"  : "<str:brand_Image_url>",
+    "type"      : "<str:Premium/Budget/Luxery>",
+    "origen"    : "<str:Home/InterNational/MultiNational>",
+    "rating"    : "<str:brand_name>"
+}

@@ -1,0 +1,6 @@
+{
+    "product"   : "<fk:prductID>",
+    "Purchase"  : "<fk:purchaseID>",
+    "quantity"  : "<int:>",
+    "price"     : "<int:inRupees>"
+}

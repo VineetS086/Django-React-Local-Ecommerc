@@ -1,0 +1,34 @@
+{
+    "id"            : "<pk:product_id>",
+    "name"          : "<str:product_name>",
+    "brand"         : "<fk:brand_id>",
+    "description"   : "<str:product_name>",
+    "imageURL"      : [
+                        "<url:imageURL>",
+                        "..."
+                    ],
+    "countInStock"  : "<int:CountINstock>",
+    "createdAt"     : "<date:dateItWasAdded>",
+    "purchases"     : "<int:NumberOfPurchases>",
+    "rating"        : "<float:1.0-5.0>",
+    "numReviews"    : "<int:noOfRatings>",
+    "review"        : [
+                        "<model:ReviewID>",
+                        "..."],
+    "isCODAvailable": "<str:product_name>",
+    "discount"      : "<float:discount>",
+    
+    
+    "gender"        : "<str:male/female>",
+    "purpose"       : "<str:Sunglass/ComputerGlass/ReadingGlass/Casual>",
+    "materialType"  : "<str:Metal/Plastic>",
+    "material"      : "<float:'Gun Metal' / 'Polycarbonate' / 'Carbon' / 'etc'>",
+    "frameType"     : "<float:rould/rect/etc>",
+    "frameDimention": "<arr[int]:[width, LensX, LensY](in mm)>",
+    "isLenseIncluded": "<bool:>",
+    "powerType"     : "<float:type ->bifocal/close/far/any >",
+    "PowerRange"    : "<arr[float]:[lower, higher]",
+
+    "Colour"        : "<char:primary color(the one which is most vissible)>",
+    "Weight"        : "<int:weight in gms>"
+}

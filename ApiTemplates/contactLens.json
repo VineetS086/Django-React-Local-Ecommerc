@@ -1,0 +1,29 @@
+{
+    "id"            : "<pk:product_id>",
+    "name"          : "<str:product_name>",
+    "brand"         : "<fk:brand_id>",
+    "description"   : "<str:product_name>",
+    "imageURL"      : [
+                        "<url:imageURL>",
+                        "..."
+                    ],
+    "countInStock"  : "<int:CountINstock>",
+    "createdAt"     : "<date:dateItWasAdded>",
+    "purchases"     : "<int:NumberOfPurchases>",
+    "rating"        : "<float:1.0-5.0>",
+    "numReviews"    : "<int:noOfRatings>",
+    "review"        : [
+                        "<model:Review>",
+                        "..."],
+    "isCODAvailable": "<str:product_name>",
+    "discount"      : "<float:discount>",
+    
+    
+    "disposability" : "<char:Single/week/month/quater/year>",
+    "isColured"     : "<bool:>",
+    "colour"        : "<char:ExactColour(hash level)->CoralBlue/CopperBlue/Tangerene>",
+    "size"          : "<float:Can-BeRemooved(mm)>",
+    "material"      : "<char:Silicon/Plastic/...>",
+    "powerType"     : "<float:type ->bifocal/close/far/any >",
+    "PowerRange"    : "<arr[float]:[lower, higher]"
+}

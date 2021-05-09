@@ -44,5 +44,9 @@
   <div class="column">
 <img src="https://github.com/VineetS086/Django-React-Local-Ecommerc/blob/master/media/chart.png" height="300">
   </div>
+
+  <div class="column">
+<img src="https://drawsql.app/talent-404/diagrams/django-react-ecom" height="300">
+  </div>
 </div>
 

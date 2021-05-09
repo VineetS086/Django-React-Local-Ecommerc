@@ -1,0 +1,4 @@
+{
+    "User"      : "<fk:UserID>",
+    "Product"   : "<fk:product details>"
+}

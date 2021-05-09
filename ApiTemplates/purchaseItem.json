@@ -2,5 +2,6 @@
     "product"   : "<fk:prductID>",
     "Purchase"  : "<fk:purchaseID>",
     "quantity"  : "<int:>",
-    "price"     : "<int:inRupees>"
+    "price"     : "<int:inRupees>",
+    "dateAdded" : "<str:datte-time(the date it was added to the Cart/Wishlist)>"
 }

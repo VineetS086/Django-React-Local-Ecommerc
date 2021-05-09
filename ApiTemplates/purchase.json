@@ -1,5 +1,7 @@
 {
-    "user"  :   "<id:UserID>",
-    ""  : "<id:UserID>"
-
+    "user"          : "<id:UserID>",
+    "purchaseItems" : "<arr[id]:[purchaseItem1, ...]>",
+    "shipping"      : "<id: reference to shipping details(the model)>",
+    
+    "date"          : "<str: datetime(date-time it was ordered)>"
 }

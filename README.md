@@ -47,7 +47,7 @@
 
   <div class="column">
    <a href="https://drawsql.app/talent-404/diagrams/django-react-ecom">
-    <img src="https://github.com/VineetS086/Django-React-Local-Ecommerc/blob/master/media/opengraph.png" height="300">
+    <img src="https://github.com/VineetS086/Django-React-Local-Ecommerc/blob/master/media/opengraph.jpeg" height="300">
    </a>
   </div>
 </div>

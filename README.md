@@ -1,4 +1,5 @@
 # Django-React-Local-Ecommerce
+## Status = Pre Coding
 
 ## Project Purpose
 

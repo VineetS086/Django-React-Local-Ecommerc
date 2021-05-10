@@ -1,4 +1,9 @@
 {
+    "id"        : "<pk:brand_id>",
     "User"      : "<fk:UserID>",
-    "Product"   : "<fk:product details>"
+    "product"   : "<fk:product refrence>",
+    "date"      : "<str:date-time>",
+    "rating"    : "<int?:1-5>",
+    "title"     : "<str?:review title>",
+    "content"   : "<str?:review's body>"
 }

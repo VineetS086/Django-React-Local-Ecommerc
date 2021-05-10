@@ -1,7 +1,9 @@
 {
+    "id"        : "<pk:purchaseItemID>",
     "product"   : "<fk:prductID>",
     "Purchase"  : "<fk:purchaseID>",
-    "quantity"  : "<int:>",
-    "price"     : "<int:inRupees>",
+    "quantity"  : "<int:no of items>",
+    "price"     : "<int:inRupees(single)>",
+    "netPrice"  : "<int:inRupees(price*quantity)(try not to use it)>",
     "dateAdded" : "<str:datte-time(the date it was added to the Cart/Wishlist)>"
 }

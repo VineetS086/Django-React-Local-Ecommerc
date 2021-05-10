@@ -1,7 +1,8 @@
 {
+    "id"            : "<pk:PurchaseID(Cart and wishlist are also a type purchase item. Wishlist remains as it is && Cart )>",
     "user"          : "<id:UserID>",
     "purchaseItems" : "<arr[id]:[purchaseItem1, ...]>",
     "shipping"      : "<id: reference to shipping details(the model)>",
-    
-    "date"          : "<str: datetime(date-time it was ordered)>"
+    "date"          : "<str: datetime(date-time it was ordered)>",
+    "isCompleted"   : "<bool: if recieved by the customer>"
 }

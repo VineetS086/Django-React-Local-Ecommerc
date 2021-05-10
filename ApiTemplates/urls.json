@@ -1,0 +1,57 @@
+{
+    "/api"      : {
+            "productlist"   : {
+                            "url"       : "/product?",
+                            "note"      : "returns a list of products",
+                            "params"    : {
+                                "q"     : "<str:search queary)>",
+                                "p"     : "<str:productType(glass, contactLens, ...)>",
+                                "b"     : "<id:brand(praada, rayban, ...)>",
+                                "bt"    : "<str:brandType(premium, budget, ...)>",
+                                "bl"    : "<str:brandLocation(home, international, ...)>",
+                                "prl"   : "<int:priceRangeLowerLimit>",
+                                "prh"   : "<id:priceRangeHigherLimit>",
+                                "is"    : "<bool:IN Stock only>",
+                                "mr"    : "<int:minimum rating>",
+                                "c"     : "<str: colour>",
+                                "m"     : "<str: material>",
+                                "lt"    : "<str: lens type>",
+                                "lrl"   : "<int: lens range lower>",
+                                "lrh"   : "<int: lens range higher>"
+
+                                
+                            },
+                            "glass's params"    : {
+                                "gg"     : "<str:glass for (men, women)>",
+                                "gk"     : "<bool:glass for (kids)>",
+                                "gp"     : "<str:purpose, Sunglasses, Computer, Reading>",
+                                "gft"    : "<str:frame type, Cat, 3Piece, Gandhi, etc>",
+                                "gs"     : "<str:frame size s, m, l, …>",
+                                "gli"    : "<bool:is len inc>",
+                                "glw"    : "<bool:is light weight)>"
+                                
+                            },
+                            "Contact Lens's params"    : {
+                                "cd"     : "<str: disposibility>"
+                                
+                            }
+            },
+            "product"       : {
+                            "url"       : "/product/<int:productID>",
+                            "note"      : "returns a single product"
+            },
+            "login"         : {
+                            "url"       : "/login",
+                            "note"      : "returns an AUTH TOKKEN",
+                            "params"    : {
+                                "email"     : "<str: valid email>",
+                                "password"  : "<str: password>"
+                            }
+            }
+            
+    },
+
+    "/app"     : {
+            "" : ""
+    }
+}

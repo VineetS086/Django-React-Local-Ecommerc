@@ -3,6 +3,7 @@
             "productlist"   : {
                             "url"       : "/product?",
                             "note"      : "returns a list of products",
+                            "example"   : "/product?b=Rayban&prh=6000",
                             "params"    : {
                                 "q"     : "<str:search queary)>",
                                 "p"     : "<str:productType(glass, contactLens, ...)>",
@@ -38,7 +39,8 @@
             },
             "product"       : {
                             "url"       : "/product/<int:productID>",
-                            "note"      : "returns a single product"
+                            "note"      : "returns a single product",
+                            "example"   : "/product/1"
             },
             "login"         : {
                             "url"       : "/login",
@@ -46,6 +48,13 @@
                             "params"    : {
                                 "email"     : "<str: valid email>",
                                 "password"  : "<str: password>"
+                            }
+            },
+            "itemsList"     : {
+                            "url"       : "/item?",
+                            "note"      : "returns a list of items",
+                            "params"    : {
+                                    "t"     : "<str: type of list; cart, oldorder, etc>"
                             }
             }
             

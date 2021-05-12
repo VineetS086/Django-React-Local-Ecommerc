@@ -7,6 +7,10 @@
   * The Site is partnered with a local shop. So, one can also book an appointment and have their eyes checked.
   * The webapp will also able to able to register compaints from the customers reguarding their current product.
 
+## Mandatory Rules:
+  * All contributors must fork the repository and commit to your own repo and not directly to this repo . 
+  * Kindly make changes in the "main" branch and not to the "master" branch directly.
+  * You can send a pull request and it will get merged after , review by any reviwer.
 
 ## Required Installations
   * python 3.9

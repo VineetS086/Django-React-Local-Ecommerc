@@ -13,7 +13,7 @@
   * You can send a pull request and it will get merged after , review by any reviwer.
 
 ## Required Installations
-  * python 3.9
+  * python 3.8.5
   * Django 3.2
   * DjangoRestFramework 3.12.4
   * ReactJS
@@ -34,7 +34,7 @@
   cd Django-React-Local-Ecommerc/
   
   pip install virtualenv
-  virtualenv env -p=python3.9
+  virtualenv env -p=python3.8.5
   source ../myenv/bin/activate
   
   pip install -r requirements.txt

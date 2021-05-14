@@ -15,17 +15,17 @@ from .constants import (
 )
 
 class AccountManager(BaseUserManager):
-    def create_user(self, email, name, password=None): #pass all required fields
+    def create_user(self, email, username, password=None): #pass all required fields
         if not email:
             raise ValueError('Email is required')
         
-        if not name:
-            raise ValueError('name is required')
+        if not username:
+            raise ValueError('Name is required')
 
 
         user = self.model(
             email       = self.normalize_email(email),
-            name    = name,
+            username    = username,
         )
 
         user.set_password(password)
@@ -35,8 +35,8 @@ class AccountManager(BaseUserManager):
         user.get_unique_key                     # REMOVE LATER
         return user
 
-    def create_superuser(self, email, name, password):
-        user = self.create_user(email, name, password)
+    def create_superuser(self, email, username, password):
+        user = self.create_user(email, username, password)
 
         user.is_superuser   = True
         user.is_admin       = True
@@ -53,8 +53,8 @@ class Account(AbstractBaseUser):
     
     #Main Fields
     email   = models.EmailField(unique=True)
-    name    = models.CharField(max_length=50)
-    pnone_no= models.CharField(max_length=10)
+    username    = models.CharField('name', max_length=50)
+    phone_no= models.CharField(max_length=10)
     # image   = models.ImageField()
 
 
@@ -83,7 +83,7 @@ class Account(AbstractBaseUser):
     #change below
     USERNAME_FIELD  = 'email'
     REQUIRED_FIELDS = [
-        'name',
+        'username',
         
     ]
     object = AccountManager()
@@ -97,7 +97,7 @@ class Account(AbstractBaseUser):
 
     #Methods and Properties
     def __str__(self):
-        return f'{self.name}'
+        return f'{self.username}'
 
 
     ##EXTRA Functionc START

@@ -54,7 +54,19 @@
                             "url"       : "/item?",
                             "note"      : "returns a list of items",
                             "params"    : {
-                                    "t"     : "<str: type of list; cart, oldorder, etc>"
+                                    "t"     : "<str: type of list; cart, wishlist, etc>",
+                                    "id"    : "<model: order refrence>"
+                            }
+            },
+
+
+            "review"     : {
+                            "url"       : "/review?",
+                            "note"      : "returns a list of reviews",
+                            "params"    : {
+                                    "u"     : "<model: user refrence>",
+                                    "p"     : "<model: product refrence>",
+                                    "s"     : "<int:stars>"
                             }
             }
             

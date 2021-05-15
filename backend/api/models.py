@@ -135,5 +135,64 @@ class Review(models.Model):
     # class Meta:
     #     unique_together = ['product', 'account']
 
+class Shipping(models.Model):
+    SHIPPING_TYPE_CHOICE    = [
+        ('COD', 'Cash On Delivery'),
+        ('OP',  'Online Payment')
+    ]
+
+    type            = models.CharField(max_length=3, choices=SHIPPING_TYPE_CHOICE)
+    shipping_cost   = models.DecimalField(max_digits=7, decimal_places=2)
+    address         = models.CharField(max_length=200)
+    pin             = models.CharField(max_length=6)
+    city            = models.CharField(max_length=100)
+    state           = models.CharField(max_length=100)
+
+    
+    @property
+    def full_address(self):
+        return f'{self.address}, {self.city}, {self.state}({self.pin})'
+
+    def __str__(self) -> str:
+        return self.full_address
 
 
+class Purchase(models.Model):
+    PURCHASE_STATE_CHOICE   = [
+        ('C', 'Cart'),
+        ('O', 'Order')
+    ]
+    account         = models.ForeignKey(Account, on_delete=models.CASCADE, null=True, blank=True)
+    created_at      = models.DateTimeField(auto_now_add=True)
+    purchase_state  = models.CharField(max_length=1, choices=PURCHASE_STATE_CHOICE, default='C')
+    payment_method  = models.CharField(max_length=30, null=True, blank=True)
+    ordered_at      = models.DateTimeField(blank=True, null=True)
+    is_completed    = models.BooleanField(default=False)
+    shipping        = models.OneToOneField(Shipping, on_delete=models.SET_NULL, null=True, blank=True)
+
+
+    def __str__(self) -> str:
+        return f'{self.account}->{self.purchase_state}'
+
+    @property
+    def purchase_total(self):
+        items   = self.purchaseitem_set.all()
+        return sum([item.item_total for item in items])
+        
+
+
+class PurchaseItem(models.Model):
+    product     = models.ForeignKey(Product, on_delete=models.CASCADE)
+    quantity    = models.PositiveSmallIntegerField(default=1)
+    purchase    = models.ForeignKey(Purchase, on_delete=models.CASCADE)
+
+    class Meta:
+        verbose_name        = "Purchase Item"
+        verbose_name_plural = "Purchase Items"
+
+    def __str__(self) -> str:
+        return f'{self.product}'
+
+    @property
+    def item_total(self):
+        return self.quantity*self.product.price

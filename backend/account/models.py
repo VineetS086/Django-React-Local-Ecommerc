@@ -54,7 +54,7 @@ class Account(AbstractBaseUser):
     #Main Fields
     email   = models.EmailField(unique=True)
     username    = models.CharField('name', max_length=50)
-    phone_no= models.CharField(max_length=10)
+    phone_no= models.CharField(max_length=10, null=True, blank=True)
     # image   = models.ImageField()
 
 
